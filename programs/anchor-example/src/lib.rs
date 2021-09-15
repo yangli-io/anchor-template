@@ -1,5 +1,7 @@
 use anchor_lang::prelude::*;
 
+declare_id!("E288NZa6XPNvfsbFerThzM5WocR7uXU8exgC7oofe5GK");
+
 #[program]
 mod basic_1 {
     use super::*;
@@ -19,8 +21,10 @@ mod basic_1 {
 
 #[derive(Accounts)]
 pub struct Initialize<'info> {
-    #[account(init)]
+    #[account(init, payer = payer)]
     pub my_account: ProgramAccount<'info, MyAccount>,
+    pub payer: AccountInfo<'info>,
+    pub system_program: AccountInfo<'info>,
 }
 
 #[derive(Accounts)]
@@ -30,6 +34,7 @@ pub struct Update<'info> {
 }
 
 #[account]
+#[derive(Default)]
 pub struct MyAccount {
     pub data: u64,
 }
