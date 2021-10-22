@@ -3,7 +3,7 @@ cluster = "localnet"
 wallet = "~/.config/solana/id.json"
 
 [programs.localnet]
-basic_1 = "E288NZa6XPNvfsbFerThzM5WocR7uXU8exgC7oofe5GK"
+basic_1 = "8MAvZwcM4jqSvjvhucStnhuhwd4c6LqgXvrv24xEs8gK"
 
 [scripts]
 test = "yarn test-anchor"

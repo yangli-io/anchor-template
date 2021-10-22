@@ -2,3 +2,4 @@
 .anchor
 node_modules
 .env*
+test-ledger

@@ -12,7 +12,7 @@ describe("basic-1", () => {
   // Configure the client to use the local cluster.
   anchor.setProvider(provider);
 
-  let myAccount = anchor.web3.Keypair.generate();
+  const myAccount = anchor.web3.Keypair.generate();
 
   it("Creates and initializes an account in two different transactions", async () => {
     // The program owning the account to create.
@@ -27,7 +27,7 @@ describe("basic-1", () => {
         payer: provider.wallet.publicKey,
         systemProgram: SystemProgram.programId,
       },
-      signers: [myAccount]
+      signers: [myAccount],
     });
     // #endregion code-separated
 

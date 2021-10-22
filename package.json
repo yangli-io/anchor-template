@@ -7,17 +7,17 @@
   },
   "scripts": {
     "lint": "eslint . --ext .ts",
-    "test-anchor": "mocha -r ts-node/register -t 10000 \"tests/**/*.ts\""
+    "test-anchor": "mocha -r ts-node/register -t 10000 \"tests/**/*.ts\"",
+    "deploy:local": "anchor build && anchor deploy"
   },
-  "author": "shuffle-labs",
   "dependencies": {
-    "@project-serum/anchor": "^0.13.2",
+    "@project-serum/anchor": "^0.17.0",
     "@project-serum/common": "^0.0.1-beta.3",
-    "@project-serum/serum": "^0.13.44",
+    "@project-serum/serum": "^0.13.60",
     "@solana/spl-token": "^0.1.6",
     "@solana/web3.js": "^1.21.0",
-    "@typescript-eslint/eslint-plugin": "^4.28.3",
-    "@typescript-eslint/parser": "^4.28.3",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
     "bignumber.js": "^9.0.1",
     "bn.js": "^5.2.0",
     "chai": "^4.3.4",
@@ -33,9 +33,9 @@
     "@types/chai": "^4.2.19",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.6.1",
-    "eslint": "^7.30.0",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-prettier": "^3.3.1",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.1",
     "prettier": "^2.3.2"
   }
