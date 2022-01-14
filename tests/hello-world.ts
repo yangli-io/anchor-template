@@ -14,10 +14,9 @@ describe("basic-1", () => {
 
   const myAccount = anchor.web3.Keypair.generate();
 
-  it("Creates and initializes an account in two different transactions", async () => {
-    // The program owning the account to create.
-    const program = anchor.workspace.Basic1;
+  const program = anchor.workspace.AnchorTemplate;
 
+  it("Creates and initializes an account in two different transactions", async () => {
     // Execute the RPC.
     // #region code-separated
     await program.rpc.initialize(new anchor.BN(1234), {
@@ -29,6 +28,7 @@ describe("basic-1", () => {
       },
       signers: [myAccount],
     });
+
     // #endregion code-separated
 
     // Fetch the newly created account from the cluster.
@@ -39,9 +39,6 @@ describe("basic-1", () => {
   });
 
   it("Updates a previously created account", async () => {
-    // The program to execute.
-    const program = anchor.workspace.Basic1;
-
     // Invoke the update rpc.
     await program.rpc.update(new anchor.BN(4321), {
       accounts: {
