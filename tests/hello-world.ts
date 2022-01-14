@@ -5,7 +5,7 @@ import { SystemProgram } from "@solana/web3.js";
 
 chai.use(chaiBN(anchor.BN));
 
-describe("basic-1", () => {
+describe("AnchorTemplate", () => {
   // Use a local provider.
   const provider = anchor.Provider.local();
 
